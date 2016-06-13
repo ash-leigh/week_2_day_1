@@ -28,4 +28,11 @@ class CatClass
     return "I am sleeping" if @activity_type == "sleeping"
   end
 
+  def add_favourite_food(new_favourite_food)
+    all_favourite_foods = []
+    all_favourite_food << @favourite_food 
+    all_favourite_food << new_favourite_food
+    @favourite_food = all_favourite_food.join(",")
+  end
+
 end
